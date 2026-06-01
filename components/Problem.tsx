@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useLang } from '@/lib/language-context'
 
 const t = {
@@ -66,8 +67,8 @@ export function Problem() {
         <div className="grid md:grid-cols-2 gap-4 md:gap-8 max-w-3xl mx-auto">
           {/* Without */}
           <div className="rounded-2xl border-2 border-red-100 bg-red-50/40 p-6">
-            <div className="flex items-center gap-2 mb-5">
-              <span className="text-lg">😩</span>
+            <div className="flex items-center gap-3 mb-5">
+              <Image src="/brand/icons/ic-without.svg" alt="Without Blickstra" width={40} height={40} className="rounded-xl flex-shrink-0" />
               <h3 className="font-medium text-zinc-900">{s.withoutTitle}</h3>
             </div>
             <div className="space-y-3">
@@ -86,8 +87,8 @@ export function Problem() {
 
           {/* With */}
           <div className="rounded-2xl border-2 border-emerald-200 bg-emerald-50/40 p-6">
-            <div className="flex items-center gap-2 mb-5">
-              <span className="text-lg">🚀</span>
+            <div className="flex items-center gap-3 mb-5">
+              <Image src="/brand/icons/ic-with.svg" alt="With Blickstra" width={40} height={40} className="rounded-xl flex-shrink-0" />
               <h3 className="font-medium text-zinc-900">{s.withTitle}</h3>
             </div>
             <div className="space-y-3">

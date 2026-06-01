@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+
+  <!-- ic-profile: Document + checkmark — Build Your Profile / How It Works step 1 -->
+  <symbol id="ic-profile" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="12" fill="#0d1a12"/>
+    <rect x="14" y="10" width="26" height="34" rx="3" fill="none" stroke="#3ecf8e" stroke-width="1.8"/>
+    <polyline points="32,10 32,22 40,22" fill="none" stroke="#3ecf8e" stroke-width="1.8" stroke-linejoin="round"/>
+    <line x1="19" y1="28" x2="30" y2="28" stroke="#3ecf8e" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    <line x1="19" y1="33" x2="34" y2="33" stroke="#3ecf8e" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    <line x1="19" y1="38" x2="32" y2="38" stroke="#3ecf8e" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    <circle cx="46" cy="46" r="10" fill="#3ecf8e"/>
+    <polyline points="40,46 44,50 52,41" fill="none" stroke="#0d1a12" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <!-- ic-scan: Radar arcs — We Scan Everything / How It Works step 2 -->
+  <symbol id="ic-scan" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="12" fill="#0d1a12"/>
+    <path d="M12 46 Q12 20 32 20 Q52 20 52 46" fill="none" stroke="#3ecf8e" stroke-width="1.8" stroke-linecap="round" opacity="0.25"/>
+    <path d="M18 46 Q18 26 32 26 Q46 26 46 46" fill="none" stroke="#3ecf8e" stroke-width="1.8" stroke-linecap="round" opacity="0.55"/>
+    <path d="M24 46 Q24 32 32 32 Q40 32 40 46" fill="none" stroke="#3ecf8e" stroke-width="1.8" stroke-linecap="round"/>
+    <circle cx="32" cy="46" r="3.5" fill="#3ecf8e"/>
+    <circle cx="32" cy="46" r="7" fill="none" stroke="#3ecf8e" stroke-width="1" opacity="0.35"/>
+    <line x1="10" y1="46" x2="54" y2="46" stroke="#3ecf8e" stroke-width="1" stroke-linecap="round" opacity="0.2"/>
+    <circle cx="20" cy="30" r="2.5" fill="#3ecf8e" opacity="0.5"/>
+    <circle cx="44" cy="28" r="2.5" fill="#3ecf8e" opacity="0.5"/>
+    <circle cx="36" cy="20" r="2.5" fill="#3ecf8e" opacity="0.85"/>
+  </symbol>
+
+  <!-- ic-alert: Bell + score badge — Get Matched & Alerted / How It Works step 3 -->
+  <symbol id="ic-alert" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="12" fill="#0d1a12"/>
+    <path d="M32 12 C22 12 18 20 18 30 L18 40 L12 46 L52 46 L46 40 L46 30 C46 20 42 12 32 12 Z" fill="none" stroke="#3ecf8e" stroke-width="1.8" stroke-linejoin="round"/>
+    <path d="M26 46 Q26 52 32 52 Q38 52 38 46" fill="none" stroke="#3ecf8e" stroke-width="1.8" stroke-linecap="round"/>
+    <rect x="38" y="8" width="18" height="14" rx="5" fill="#3ecf8e"/>
+    <text x="47" y="19" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="9" font-weight="500" fill="#0d1a12">87</text>
+  </symbol>
+
+  <!-- ic-lock: Lock with keyhole — Data Encryption / Security -->
+  <symbol id="ic-lock" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="12" fill="#0d1a12"/>
+    <rect x="16" y="30" width="32" height="24" rx="4" fill="none" stroke="#3ecf8e" stroke-width="1.8"/>
+    <path d="M22 30 L22 22 Q32 12 42 22 L42 30" fill="none" stroke="#3ecf8e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="32" cy="41" r="4" fill="#3ecf8e"/>
+    <rect x="30" y="41" width="4" height="7" rx="2" fill="#3ecf8e"/>
+  </symbol>
+
+  <!-- ic-shield: Shield MY — Malaysian Compliance / Security -->
+  <symbol id="ic-shield" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="12" fill="#0d1a12"/>
+    <path d="M32 10 L50 16 L50 34 Q50 50 32 56 Q14 50 14 34 L14 16 Z" fill="none" stroke="#3ecf8e" stroke-width="1.8" stroke-linejoin="round"/>
+    <text x="32" y="38" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="13" font-weight="500" fill="#3ecf8e">MY</text>
+  </symbol>
+
+  <!-- ic-private: Eye strikethrough — Private by Default / Security -->
+  <symbol id="ic-private" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="12" fill="#0d1a12"/>
+    <path d="M10 32 Q32 14 54 32 Q32 50 10 32 Z" fill="none" stroke="#3ecf8e" stroke-width="1.8" stroke-linejoin="round"/>
+    <circle cx="32" cy="32" r="7" fill="none" stroke="#3ecf8e" stroke-width="1.8"/>
+    <circle cx="32" cy="32" r="2.5" fill="#3ecf8e"/>
+    <line x1="14" y1="14" x2="50" y2="50" stroke="#3ecf8e" stroke-width="2" stroke-linecap="round"/>
+    <line x1="12" y1="12" x2="16" y2="16" stroke="#0d1a12" stroke-width="4" stroke-linecap="round"/>
+    <line x1="48" y1="48" x2="52" y2="52" stroke="#0d1a12" stroke-width="4" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- ic-ai-chip: CPU chip — Transparent AI / Security -->
+  <symbol id="ic-ai-chip" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="12" fill="#0d1a12"/>
+    <rect x="18" y="18" width="28" height="28" rx="4" fill="none" stroke="#3ecf8e" stroke-width="1.8"/>
+    <rect x="23" y="23" width="18" height="18" rx="2" fill="#3ecf8e" opacity="0.12"/>
+    <line x1="10" y1="24" x2="18" y2="24" stroke="#3ecf8e" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="10" y1="32" x2="18" y2="32" stroke="#3ecf8e" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="10" y1="40" x2="18" y2="40" stroke="#3ecf8e" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="46" y1="24" x2="54" y2="24" stroke="#3ecf8e" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="46" y1="32" x2="54" y2="32" stroke="#3ecf8e" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="46" y1="40" x2="54" y2="40" stroke="#3ecf8e" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="24" y1="10" x2="24" y2="18" stroke="#3ecf8e" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="32" y1="10" x2="32" y2="18" stroke="#3ecf8e" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="40" y1="10" x2="40" y2="18" stroke="#3ecf8e" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="24" y1="46" x2="24" y2="54" stroke="#3ecf8e" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="32" y1="46" x2="32" y2="54" stroke="#3ecf8e" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="40" y1="46" x2="40" y2="54" stroke="#3ecf8e" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="32" y="36" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11" font-weight="500" fill="#3ecf8e">AI</text>
+  </symbol>
+
+  <!-- ic-without: X mark — Without Blickstra / Comparison -->
+  <symbol id="ic-without" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="12" fill="#fde8e8"/>
+    <line x1="18" y1="18" x2="46" y2="46" stroke="#e24b4a" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="46" y1="18" x2="18" y2="46" stroke="#e24b4a" stroke-width="2.5" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- ic-with: Checkmark — With Blickstra / Comparison -->
+  <symbol id="ic-with" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="12" fill="#3ecf8e"/>
+    <polyline points="14,32 26,44 50,20" fill="none" stroke="#0d1a12" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <!-- ic-ai-matching: Crosshair — AI Matching / Features -->
+  <symbol id="ic-ai-matching" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="12" fill="#0d1a12"/>
+    <circle cx="32" cy="32" r="18" fill="none" stroke="#3ecf8e" stroke-width="1.8"/>
+    <circle cx="32" cy="32" r="10" fill="none" stroke="#3ecf8e" stroke-width="1.8"/>
+    <circle cx="32" cy="32" r="3" fill="#3ecf8e"/>
+    <line x1="32" y1="10" x2="32" y2="18" stroke="#3ecf8e" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="32" y1="46" x2="32" y2="54" stroke="#3ecf8e" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="10" y1="32" x2="18" y2="32" stroke="#3ecf8e" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="46" y1="32" x2="54" y2="32" stroke="#3ecf8e" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- ic-telegram: Send arrow + score — Instant Telegram Alerts / Features -->
+  <symbol id="ic-telegram" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="12" fill="#0d1a12"/>
+    <path d="M10 32 L54 14 L40 54 L30 38 Z" fill="none" stroke="#3ecf8e" stroke-width="1.8" stroke-linejoin="round"/>
+    <line x1="30" y1="38" x2="54" y2="14" stroke="#3ecf8e" stroke-width="1.8" stroke-linecap="round"/>
+    <rect x="40" y="8" width="18" height="13" rx="4" fill="#3ecf8e"/>
+    <text x="49" y="18" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="8.5" font-weight="500" fill="#0d1a12">87</text>
+  </symbol>
+
+  <!-- ic-dashboard: Bar chart + threshold — Smart Dashboard / Features -->
+  <symbol id="ic-dashboard" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="12" fill="#0d1a12"/>
+    <rect x="11" y="36" width="8" height="18" rx="2" fill="#3ecf8e" opacity="0.35"/>
+    <rect x="23" y="26" width="8" height="28" rx="2" fill="#3ecf8e" opacity="0.65"/>
+    <rect x="35" y="18" width="8" height="36" rx="2" fill="#3ecf8e"/>
+    <rect x="47" y="30" width="8" height="24" rx="2" fill="#3ecf8e" opacity="0.5"/>
+    <line x1="8" y1="30" x2="56" y2="30" stroke="#3ecf8e" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="3 3" opacity="0.7"/>
+    <line x1="8" y1="54" x2="56" y2="54" stroke="#3ecf8e" stroke-width="1" stroke-linecap="round" opacity="0.25"/>
+  </symbol>
+
+  <!-- ic-document-analysis: Doc + magnifier — Document Analysis / Features -->
+  <symbol id="ic-document-analysis" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="12" fill="#0d1a12"/>
+    <rect x="10" y="8" width="28" height="38" rx="3" fill="none" stroke="#3ecf8e" stroke-width="1.8"/>
+    <polyline points="30,8 30,20 38,20" fill="none" stroke="#3ecf8e" stroke-width="1.8" stroke-linejoin="round"/>
+    <line x1="15" y1="26" x2="27" y2="26" stroke="#3ecf8e" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    <line x1="15" y1="31" x2="27" y2="31" stroke="#3ecf8e" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    <line x1="15" y1="36" x2="23" y2="36" stroke="#3ecf8e" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    <circle cx="44" cy="44" r="10" fill="none" stroke="#3ecf8e" stroke-width="1.8"/>
+    <line x1="51" y1="51" x2="58" y2="58" stroke="#3ecf8e" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="40" y1="44" x2="48" y2="44" stroke="#3ecf8e" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+    <line x1="44" y1="40" x2="44" y2="48" stroke="#3ecf8e" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  </symbol>
+
+</svg>

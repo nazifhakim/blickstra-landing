@@ -1,10 +1,14 @@
 'use client'
 
-import { Target, Zap, LayoutDashboard, FileSearch } from 'lucide-react'
+import Image from 'next/image'
 import { useLang } from '@/lib/language-context'
 
-const icons = [Target, Zap, LayoutDashboard, FileSearch]
-const colors = ['bg-emerald-50 text-emerald-600', 'bg-amber-50 text-amber-600', 'bg-blue-50 text-blue-600', 'bg-purple-50 text-purple-600']
+const icons = [
+  '/brand/icons/ic-ai-matching.svg',
+  '/brand/icons/ic-telegram.svg',
+  '/brand/icons/ic-dashboard.svg',
+  '/brand/icons/ic-document-analysis.svg',
+]
 
 const t = {
   en: {
@@ -41,18 +45,15 @@ export function Features() {
           <h2 className="text-3xl md:text-4xl font-medium text-zinc-900 tracking-tight">{s.heading}</h2>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
-          {s.features.map((f, i) => {
-            const Icon = icons[i]
-            return (
-              <div key={f.title} className="bg-white rounded-2xl border border-zinc-200 p-7 hover:shadow-md transition-shadow">
-                <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-4 ${colors[i]}`}>
-                  <Icon className="w-5 h-5" />
-                </div>
-                <h3 className="text-lg font-medium text-zinc-900 mb-3">{f.title}</h3>
-                <p className="text-sm text-zinc-500 leading-relaxed">{f.desc}</p>
+          {s.features.map((f, i) => (
+            <div key={f.title} className="bg-white rounded-2xl border border-zinc-200 p-7 hover:shadow-md transition-shadow">
+              <div className="mb-4">
+                <Image src={icons[i]} alt={f.title} width={56} height={56} className="rounded-xl" />
               </div>
-            )
-          })}
+              <h3 className="text-lg font-medium text-zinc-900 mb-3">{f.title}</h3>
+              <p className="text-sm text-zinc-500 leading-relaxed">{f.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

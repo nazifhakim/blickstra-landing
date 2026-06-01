@@ -1,24 +1,31 @@
 'use client'
 
+import Image from 'next/image'
 import { useLang } from '@/lib/language-context'
+
+const icons = [
+  '/brand/icons/ic-profile.svg',
+  '/brand/icons/ic-scan.svg',
+  '/brand/icons/ic-alert.svg',
+]
 
 const t = {
   en: {
     label: 'How It Works',
     heading: 'From profile to opportunity in 3 steps',
     steps: [
-      { n: '01', icon: '🏢', title: 'Build Your Profile', desc: 'Upload your CIDB cert, company profile, and MOF registration. Our AI extracts your capabilities, CIDB grade, and Kod Bidang automatically.' },
-      { n: '02', icon: '🤖', title: 'We Scan Everything', desc: "Blickstra monitors 10 Malaysian government portals twice daily — JKR, MOH, TNB, KWSP, TenderDirect, and more — so you don't have to." },
-      { n: '03', icon: '📱', title: 'Get Matched & Alerted', desc: 'When a tender scores above your threshold, you get an instant Telegram alert with the title, estimated value, deadline, and AI match score.' },
+      { n: '01', title: 'Build Your Profile', desc: 'Upload your CIDB cert, company profile, and MOF registration. Our AI extracts your capabilities, CIDB grade, and Kod Bidang automatically.' },
+      { n: '02', title: 'We Scan Everything', desc: "Blickstra monitors 10 Malaysian government portals twice daily — JKR, MOH, TNB, KWSP, TenderDirect, and more — so you don't have to." },
+      { n: '03', title: 'Get Matched & Alerted', desc: 'When a tender scores above your threshold, you get an instant Telegram alert with the title, estimated value, deadline, and AI match score.' },
     ],
   },
   bm: {
     label: 'Cara Kerjanya',
     heading: 'Dari profil ke peluang dalam 3 langkah',
     steps: [
-      { n: '01', icon: '🏢', title: 'Bina Profil Anda', desc: 'Muat naik sijil CIDB, profil syarikat, dan pendaftaran MOF anda. AI kami mengekstrak keupayaan, gred CIDB, dan Kod Bidang anda secara automatik.' },
-      { n: '02', icon: '🤖', title: 'Kami Pantau Semua', desc: 'Blickstra memantau 10 portal kerajaan Malaysia dua kali sehari — JKR, MOH, TNB, KWSP, TenderDirect, dan lagi — supaya anda tidak perlu.' },
-      { n: '03', icon: '📱', title: 'Dapat Padanan & Amaran', desc: 'Apabila tender mendapat skor melebihi had anda, anda menerima amaran Telegram segera dengan tajuk, nilai anggaran, tarikh akhir, dan skor padanan AI.' },
+      { n: '01', title: 'Bina Profil Anda', desc: 'Muat naik sijil CIDB, profil syarikat, dan pendaftaran MOF anda. AI kami mengekstrak keupayaan, gred CIDB, dan Kod Bidang anda secara automatik.' },
+      { n: '02', title: 'Kami Pantau Semua', desc: 'Blickstra memantau 10 portal kerajaan Malaysia dua kali sehari — JKR, MOH, TNB, KWSP, TenderDirect, dan lagi — supaya anda tidak perlu.' },
+      { n: '03', title: 'Dapat Padanan & Amaran', desc: 'Apabila tender mendapat skor melebihi had anda, anda menerima amaran Telegram segera dengan tajuk, nilai anggaran, tarikh akhir, dan skor padanan AI.' },
     ],
   },
 }
@@ -42,9 +49,7 @@ export function HowItWorks() {
               )}
               <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-14 h-14 rounded-2xl bg-zinc-950 flex items-center justify-center text-2xl flex-shrink-0">
-                    {step.icon}
-                  </div>
+                  <Image src={icons[i]} alt={step.title} width={56} height={56} className="rounded-2xl flex-shrink-0" />
                   <span className="text-3xl font-black text-zinc-100 font-mono">{step.n}</span>
                 </div>
                 <h3 className="text-lg font-medium text-zinc-900 mb-3">{step.title}</h3>
