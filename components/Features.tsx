@@ -1,53 +1,58 @@
-import { Target, Zap, LayoutDashboard, FileSearch } from 'lucide-react'
+'use client'
 
-const features = [
-  {
-    icon: Target,
-    title: 'AI Matching',
-    desc: 'Upload your company profile once. Blickstra\'s AI scores every tender against your CIDB grade, MOF Kod Bidang, and capabilities. Only relevant tenders reach you.',
-    color: 'bg-emerald-50 text-emerald-600',
+import { Target, Zap, LayoutDashboard, FileSearch } from 'lucide-react'
+import { useLang } from '@/lib/language-context'
+
+const icons = [Target, Zap, LayoutDashboard, FileSearch]
+const colors = ['bg-emerald-50 text-emerald-600', 'bg-amber-50 text-amber-600', 'bg-blue-50 text-blue-600', 'bg-purple-50 text-purple-600']
+
+const t = {
+  en: {
+    label: 'Features',
+    heading: 'Everything you need to win more contracts',
+    features: [
+      { title: 'AI Matching', desc: "Upload your company profile once. Blickstra's AI scores every tender against your CIDB grade, MOF Kod Bidang, and capabilities. Only relevant tenders reach you." },
+      { title: 'Instant Telegram Alerts', desc: 'Get notified the moment a matching tender is published. Not daily digests — real-time alerts straight to your Telegram when the score exceeds your threshold.' },
+      { title: 'Smart Dashboard', desc: 'Track all opportunities in one place. Filter by portal, score, deadline, or category. Never lose track of a promising tender again.' },
+      { title: 'Document Analysis', desc: 'Upload your CIDB cert and company profile. Our AI auto-extracts your capabilities and recommends keywords — no manual setup needed.' },
+    ],
   },
-  {
-    icon: Zap,
-    title: 'Instant Telegram Alerts',
-    desc: 'Get notified the moment a matching tender is published. Not daily digests — real-time alerts straight to your Telegram when the score exceeds your threshold.',
-    color: 'bg-amber-50 text-amber-600',
+  bm: {
+    label: 'Ciri-ciri',
+    heading: 'Semua yang anda perlukan untuk memenangi lebih banyak kontrak',
+    features: [
+      { title: 'Padanan AI', desc: 'Muat naik profil syarikat anda sekali. AI Blickstra menilai setiap tender berbanding gred CIDB, Kod Bidang MOF, dan keupayaan anda. Hanya tender relevan sampai kepada anda.' },
+      { title: 'Amaran Telegram Segera', desc: 'Terima pemberitahuan serta-merta apabila tender yang sepadan diterbitkan. Bukan digest harian — amaran masa nyata terus ke Telegram anda apabila skor melebihi had anda.' },
+      { title: 'Papan Pemuka Pintar', desc: 'Jejak semua peluang di satu tempat. Tapis mengikut portal, skor, tarikh akhir, atau kategori. Jangan lagi terlepas tender yang menjanjikan.' },
+      { title: 'Analisis Dokumen', desc: 'Muat naik sijil CIDB dan profil syarikat anda. AI kami mengekstrak keupayaan anda secara automatik dan mengesyorkan kata kunci — tiada persediaan manual diperlukan.' },
+    ],
   },
-  {
-    icon: LayoutDashboard,
-    title: 'Smart Dashboard',
-    desc: 'Track all opportunities in one place. Filter by portal, score, deadline, or category. Never lose track of a promising tender again.',
-    color: 'bg-blue-50 text-blue-600',
-  },
-  {
-    icon: FileSearch,
-    title: 'Document Analysis',
-    desc: 'Upload your CIDB cert and company profile. Our AI auto-extracts your capabilities and recommends keywords — no manual setup needed.',
-    color: 'bg-purple-50 text-purple-600',
-  },
-]
+}
 
 export function Features() {
+  const { lang } = useLang()
+  const s = t[lang]
+
   return (
     <section id="features" className="py-20 md:py-28 px-6 bg-zinc-50">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
-          <p className="text-xs font-semibold text-emerald-600 uppercase tracking-widest mb-3">Features</p>
-          <h2 className="text-3xl md:text-4xl font-medium text-zinc-900 tracking-tight">
-            Everything you need to win more contracts
-          </h2>
+          <p className="text-xs font-semibold text-emerald-600 uppercase tracking-widest mb-3">{s.label}</p>
+          <h2 className="text-3xl md:text-4xl font-medium text-zinc-900 tracking-tight">{s.heading}</h2>
         </div>
-
         <div className="grid md:grid-cols-2 gap-6">
-          {features.map(f => (
-            <div key={f.title} className="bg-white rounded-2xl border border-zinc-200 p-7 hover:shadow-md transition-shadow">
-              <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-4 ${f.color}`}>
-                <f.icon className="w-5 h-5" />
+          {s.features.map((f, i) => {
+            const Icon = icons[i]
+            return (
+              <div key={f.title} className="bg-white rounded-2xl border border-zinc-200 p-7 hover:shadow-md transition-shadow">
+                <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-4 ${colors[i]}`}>
+                  <Icon className="w-5 h-5" />
+                </div>
+                <h3 className="text-lg font-medium text-zinc-900 mb-3">{f.title}</h3>
+                <p className="text-sm text-zinc-500 leading-relaxed">{f.desc}</p>
               </div>
-              <h3 className="text-lg font-medium text-zinc-900 mb-3">{f.title}</h3>
-              <p className="text-sm text-zinc-500 leading-relaxed">{f.desc}</p>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

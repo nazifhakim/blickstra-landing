@@ -1,3 +1,7 @@
+'use client'
+
+import { useLang } from '@/lib/language-context'
+
 const portals = [
   { name: 'JKR Malaysia', count: '200+', status: 'live' },
   { name: 'Ministry of Health', count: '53+', status: 'live' },
@@ -13,47 +17,56 @@ const portals = [
   { name: 'Sennego.com', count: '—', status: 'soon' },
 ]
 
+const t = {
+  en: {
+    label: 'Coverage',
+    heading: '10 government portals. One platform.',
+    sub: "We watch these so you don't have to.",
+    activeTenders: 'active tenders',
+    more: '+ More portals added regularly',
+  },
+  bm: {
+    label: 'Liputan',
+    heading: '10 portal kerajaan. Satu platform.',
+    sub: 'Kami memantaunya supaya anda tidak perlu.',
+    activeTenders: 'tender aktif',
+    more: '+ Lebih banyak portal ditambah secara berkala',
+  },
+}
+
 export function Portals() {
+  const { lang } = useLang()
+  const s = t[lang]
+
   return (
     <section id="portals" className="py-20 md:py-28 px-6 bg-zinc-950">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
-          <p className="text-xs font-semibold text-emerald-400 uppercase tracking-widest mb-3">Coverage</p>
-          <h2 className="text-3xl md:text-4xl font-medium text-white tracking-tight mb-2">
-            10 government portals. One platform.
-          </h2>
-          <p className="text-zinc-400">We watch these so you don&apos;t have to.</p>
+          <p className="text-xs font-semibold text-emerald-400 uppercase tracking-widest mb-3">{s.label}</p>
+          <h2 className="text-3xl md:text-4xl font-medium text-white tracking-tight mb-2">{s.heading}</h2>
+          <p className="text-zinc-400">{s.sub}</p>
         </div>
-
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
           {portals.map(p => (
-            <div key={p.name}
-              className="bg-zinc-900 border border-zinc-800 rounded-xl p-4 hover:border-zinc-700 transition-colors">
+            <div key={p.name} className="bg-zinc-900 border border-zinc-800 rounded-xl p-4 hover:border-zinc-700 transition-colors">
               <div className="flex items-center justify-between mb-2">
                 {p.status === 'live' ? (
                   <span className="flex items-center gap-1.5 text-[10px] font-medium text-emerald-400">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                    LIVE
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />LIVE
                   </span>
                 ) : (
                   <span className="flex items-center gap-1.5 text-[10px] font-medium text-amber-400">
-                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
-                    SOON
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />SOON
                   </span>
                 )}
-                {p.count !== '—' && (
-                  <span className="text-xs font-mono text-zinc-400">{p.count}</span>
-                )}
+                {p.count !== '—' && <span className="text-xs font-mono text-zinc-400">{p.count}</span>}
               </div>
               <p className="text-sm font-medium text-zinc-200 leading-tight">{p.name}</p>
-              {p.count !== '—' && (
-                <p className="text-[10px] text-zinc-600 mt-0.5">active tenders</p>
-              )}
+              {p.count !== '—' && <p className="text-[10px] text-zinc-600 mt-0.5">{s.activeTenders}</p>}
             </div>
           ))}
         </div>
-
-        <p className="text-center text-xs text-zinc-500 mt-6">+ More portals added regularly</p>
+        <p className="text-center text-xs text-zinc-500 mt-6">{s.more}</p>
       </div>
     </section>
   )
