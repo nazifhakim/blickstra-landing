@@ -2,26 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+html {
+  scroll-behavior: smooth;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .gradient-emerald {
+    @apply bg-gradient-to-r from-emerald-500 to-emerald-400 bg-clip-text text-transparent;
+  }
+  .section-padding {
+    @apply px-6 py-20 md:py-28;
   }
 }
