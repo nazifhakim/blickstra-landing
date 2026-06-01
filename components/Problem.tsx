@@ -19,7 +19,7 @@ export function Problem() {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <p className="text-xs font-semibold text-emerald-600 uppercase tracking-widest mb-3">The Problem</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-medium text-zinc-900 tracking-tight">
             Save 20+ hours per week<br />on tender hunting
           </h2>
         </div>

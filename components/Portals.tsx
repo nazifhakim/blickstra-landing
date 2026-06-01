@@ -19,7 +19,7 @@ export function Portals() {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
           <p className="text-xs font-semibold text-emerald-400 uppercase tracking-widest mb-3">Coverage</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-2">
+          <h2 className="text-3xl md:text-4xl font-medium text-white tracking-tight mb-2">
             10 portal kerajaan. Satu platform.
           </h2>
           <p className="text-zinc-400">10 government portals. One platform. We watch these so you don&apos;t have to.</p>

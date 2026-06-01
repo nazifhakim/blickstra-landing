@@ -8,7 +8,7 @@ export function CTA() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(62,207,142,0.08)_0%,_transparent_70%)]" />
 
       <div className="relative max-w-3xl mx-auto text-center">
-        <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-3">
+        <h2 className="text-3xl md:text-5xl font-medium text-white tracking-tight mb-3">
           Mula memenangi lebih banyak tender hari ini
         </h2>
         <p className="text-lg text-zinc-400 mb-4">Start winning more tenders today</p>
@@ -19,7 +19,7 @@ export function CTA() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
           <Link
             href="https://app.blickstra.com/auth/signup"
-            className="flex items-center gap-2 px-7 py-3.5 bg-emerald-400 hover:bg-emerald-300 text-zinc-900 font-bold rounded-md transition-colors text-base"
+            className="flex items-center gap-2 px-7 py-3.5 bg-emerald-400 hover:bg-emerald-300 text-zinc-900 font-medium rounded-md transition-colors text-base"
           >
             Daftar Percuma / Get Started Free
             <ArrowRight className="w-4 h-4" />

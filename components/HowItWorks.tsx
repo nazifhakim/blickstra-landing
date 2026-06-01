@@ -28,7 +28,7 @@ export function HowItWorks() {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
           <p className="text-xs font-semibold text-emerald-600 uppercase tracking-widest mb-3">How It Works</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 tracking-tight mb-2">
+          <h2 className="text-3xl md:text-4xl font-medium text-zinc-900 tracking-tight mb-2">
             From profile to opportunity in 3 steps
           </h2>
           <p className="text-sm text-zinc-400 font-medium">Dari profil ke peluang dalam 3 langkah</p>
@@ -47,7 +47,7 @@ export function HowItWorks() {
                   </div>
                   <span className="text-3xl font-black text-zinc-100 font-mono">{s.n}</span>
                 </div>
-                <h3 className="text-lg font-bold text-zinc-900 mb-0.5">{s.title}</h3>
+                <h3 className="text-lg font-medium text-zinc-900 mb-0.5">{s.title}</h3>
                 <p className="text-xs text-zinc-400 font-medium mb-3">{s.titleBm}</p>
                 <p className="text-sm text-zinc-500 leading-relaxed">{s.desc}</p>
               </div>

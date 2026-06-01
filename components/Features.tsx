@@ -37,7 +37,7 @@ export function Features() {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
           <p className="text-xs font-semibold text-emerald-600 uppercase tracking-widest mb-3">Features</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-medium text-zinc-900 tracking-tight">
             Everything you need to win more contracts
           </h2>
         </div>
@@ -48,7 +48,7 @@ export function Features() {
               <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-4 ${f.color}`}>
                 <f.icon className="w-5 h-5" />
               </div>
-              <h3 className="text-lg font-bold text-zinc-900 mb-0.5">{f.title}</h3>
+              <h3 className="text-lg font-medium text-zinc-900 mb-0.5">{f.title}</h3>
               <p className="text-xs text-zinc-400 font-medium mb-3">{f.titleBm}</p>
               <p className="text-sm text-zinc-500 leading-relaxed">{f.desc}</p>
             </div>

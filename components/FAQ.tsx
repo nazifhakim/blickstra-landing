@@ -73,7 +73,7 @@ export function FAQ() {
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-xs font-semibold text-emerald-600 uppercase tracking-widest mb-3">FAQ</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 tracking-tight">Soalan Lazim</h2>
+          <h2 className="text-3xl md:text-4xl font-medium text-zinc-900 tracking-tight">Soalan Lazim</h2>
         </div>
         <div className="bg-white rounded-2xl border border-zinc-200 px-8 divide-y divide-zinc-100">
           {faqs.map(faq => <FAQItem key={faq.q} faq={faq} />)}

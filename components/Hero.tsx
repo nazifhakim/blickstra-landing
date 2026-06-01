@@ -16,7 +16,7 @@ export function Hero() {
         </div>
 
         {/* Headline */}
-        <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-zinc-900 leading-[1.08] mb-6">
+        <h1 className="text-4xl md:text-6xl font-medium tracking-tight text-zinc-900 leading-[1.08] mb-6">
           Strategic Tender Intelligence<br />
           <span className="text-emerald-500">for Malaysian Contractors</span>
         </h1>
@@ -36,7 +36,7 @@ export function Hero() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
           <Link
             href="https://app.blickstra.com/auth/signup"
-            className="flex items-center gap-2 px-6 py-3 bg-emerald-400 hover:bg-emerald-300 text-zinc-900 font-semibold rounded-md transition-colors text-base shadow-sm"
+            className="flex items-center gap-2 px-6 py-3 bg-emerald-400 hover:bg-emerald-300 text-zinc-900 font-medium rounded-md transition-colors text-base shadow-sm"
           >
             Mula Percuma / Get Started Free
             <ArrowRight className="w-4 h-4" />

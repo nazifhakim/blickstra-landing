@@ -43,7 +43,7 @@ export function Pricing() {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
           <p className="text-xs font-semibold text-emerald-600 uppercase tracking-widest mb-3">Pricing</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 tracking-tight mb-2">
+          <h2 className="text-3xl md:text-4xl font-medium text-zinc-900 tracking-tight mb-2">
             Mula percuma. Naik taraf bila perlu.
           </h2>
           <p className="text-zinc-400 text-sm">Start free. Upgrade when you&apos;re ready. No credit card required. No hidden fees.</p>
@@ -58,14 +58,14 @@ export function Pricing() {
             }`}>
               {p.popular && (
                 <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                  <span className="px-3 py-1 bg-emerald-400 text-zinc-900 text-xs font-bold rounded-full">
+                  <span className="px-3 py-1 bg-emerald-400 text-zinc-900 text-xs font-medium rounded-full">
                     MOST POPULAR
                   </span>
                 </div>
               )}
 
               <div className="mb-5">
-                <h3 className={`text-lg font-bold mb-0.5 ${p.popular ? 'text-white' : 'text-zinc-900'}`}>
+                <h3 className={`text-lg font-medium mb-0.5 ${p.popular ? 'text-white' : 'text-zinc-900'}`}>
                   {p.name}
                 </h3>
                 <p className="text-xs text-zinc-400 font-medium">{p.nameBm}</p>
@@ -87,7 +87,7 @@ export function Pricing() {
                 ))}
               </ul>
 
-              <Link href={p.href} className={`block text-center py-2.5 rounded-md text-sm font-semibold transition-colors ${
+              <Link href={p.href} className={`block text-center py-2.5 rounded-md text-sm font-medium transition-colors ${
                 p.popular
                   ? 'bg-emerald-400 hover:bg-emerald-300 text-zinc-900'
                   : 'border-2 border-zinc-200 hover:border-zinc-400 text-zinc-700'
