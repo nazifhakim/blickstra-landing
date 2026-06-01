@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -30,10 +31,8 @@ export function Navbar() {
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-md bg-emerald-400 flex items-center justify-center">
-            <span className="text-zinc-900 text-sm font-bold">B</span>
-          </div>
-          <span className="font-semibold text-zinc-900 tracking-tight">Blickstra</span>
+          <Image src="/brand/blickstra-mark.svg" alt="Blickstra" width={28} height={28} className="rounded-md" />
+          <span className="font-medium text-zinc-900 tracking-tight">Blickstra</span>
         </Link>
 
         {/* Desktop nav */}

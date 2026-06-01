@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export function Footer() {
   return (
@@ -8,10 +9,8 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-7 h-7 rounded-md bg-emerald-400 flex items-center justify-center">
-                <span className="text-zinc-900 text-sm font-bold">B</span>
-              </div>
-              <span className="font-semibold text-white">Blickstra</span>
+              <Image src="/brand/blickstra-mark.svg" alt="Blickstra" width={28} height={28} className="rounded-md" />
+              <span className="font-medium text-white">Blickstra</span>
             </div>
             <p className="text-sm leading-relaxed mb-4">
               Strategic Tender Intelligence<br />for Malaysian Contractors
