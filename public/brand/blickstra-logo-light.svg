@@ -1,4 +1,5 @@
-<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="260" height="64" viewBox="0 0 260 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Mark -->
   <rect width="64" height="64" rx="12" fill="#3ecf8e"/>
   <rect x="15" y="11" width="8" height="42" rx="2" fill="#0d1a12"/>
   <rect x="15" y="11" width="22" height="8" rx="2" fill="#0d1a12"/>
@@ -8,4 +9,8 @@
   <rect x="31" y="28.5" width="15" height="24.5" rx="7.5" fill="#0d1a12"/>
   <rect x="32" y="19" width="9.5" height="9.5" fill="#3ecf8e"/>
   <rect x="34" y="11" width="6" height="5" fill="#3ecf8e"/>
+  <!-- Wordmark -->
+  <text x="80" y="39" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" font-weight="500" letter-spacing="0.5" fill="#171717">BLICKSTRA</text>
+  <!-- Tagline -->
+  <text x="81" y="54" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="9" font-weight="400" letter-spacing="2.2" fill="#707070">STRATEGIC INTELLIGENCE</text>
 </svg>

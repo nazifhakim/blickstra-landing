@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Blickstra — Brand Guidelines 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+  :root {
+    --emerald: #3ecf8e;
+    --emerald-deep: #24b47e;
+    --ink: #171717;
+    --ink-secondary: #212121;
+    --ink-mute: #707070;
+    --ink-faint: #b2b2b2;
+    --canvas: #ffffff;
+    --canvas-soft: #fafafa;
+    --canvas-night: #09090b;
+    --hairline: #dfdfdf;
+    --hairline-strong: #c7c7c7;
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: var(--canvas-soft);
+    color: var(--ink);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* ── COVER ── */
+  .cover {
+    background: var(--canvas-night);
+    color: #fff;
+    padding: 80px 64px 64px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover-grid {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background-image: linear-gradient(var(--emerald) 1px, transparent 1px), linear-gradient(90deg, var(--emerald) 1px, transparent 1px);
+    background-size: 48px 48px;
+    opacity: 0.04;
+  }
+  .cover-mark {
+    width: 72px; height: 72px; border-radius: 12px;
+    background: var(--emerald);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 32px;
+    position: relative; z-index: 1;
+  }
+  .cover-mark svg { width: 40px; height: 40px; }
+  .cover h1 {
+    font-size: 48px; font-weight: 500; letter-spacing: -1px;
+    line-height: 1.05; margin-bottom: 12px;
+    position: relative; z-index: 1;
+  }
+  .cover h1 span { color: var(--emerald); }
+  .cover-sub {
+    font-size: 14px; color: #707070; letter-spacing: 0.18em;
+    font-weight: 400; margin-bottom: 48px;
+    position: relative; z-index: 1;
+  }
+  .cover-meta {
+    display: flex; gap: 32px; position: relative; z-index: 1;
+    border-top: 1px solid #2a2a2a; padding-top: 28px;
+  }
+  .cover-meta-item label { display: block; font-size: 11px; color: #505050; letter-spacing: 0.1em; margin-bottom: 4px; }
+  .cover-meta-item span { font-size: 13px; color: #aaa; }
+
+  /* ── LAYOUT ── */
+  .page { max-width: 960px; margin: 0 auto; padding: 0 40px 80px; }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    margin: 56px 0 28px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--hairline);
+    display: flex; align-items: baseline; gap: 16px;
+  }
+  .section-num {
+    font-size: 11px; font-weight: 500; color: var(--emerald);
+    letter-spacing: 0.14em;
+    background: #e8faf3; padding: 2px 8px; border-radius: 4px;
+  }
+  .section-header h2 { font-size: 22px; font-weight: 500; letter-spacing: -0.3px; }
+
+  /* ── CARDS ── */
+  .card {
+    background: var(--canvas); border: 1px solid var(--hairline);
+    border-radius: var(--radius-lg); padding: 28px 32px;
+    margin-bottom: 16px;
+  }
+  .card-dark {
+    background: var(--canvas-night); border: 1px solid #1f1f1f;
+    border-radius: var(--radius-lg); padding: 28px 32px;
+    margin-bottom: 16px; color: #fff;
+  }
+  .card h3 { font-size: 13px; font-weight: 500; color: var(--ink-mute); letter-spacing: 0.1em; margin-bottom: 20px; }
+  .card-dark h3 { color: #505050; }
+
+  /* ── LOGO LOCKUPS ── */
+  .lockup-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .lockup-box {
+    background: var(--canvas); border: 1px solid var(--hairline);
+    border-radius: var(--radius-lg); padding: 32px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    min-height: 140px; gap: 8px;
+  }
+  .lockup-box.dark { background: var(--canvas-night); border-color: #1f1f1f; }
+  .lockup-box.soft { background: var(--canvas-soft); }
+  .lockup-label {
+    font-size: 11px; color: var(--ink-faint); letter-spacing: 0.1em;
+    text-align: center; margin-top: 8px;
+  }
+
+  /* inline logo helper */
+  .logo-h { display: flex; align-items: center; gap: 12px; }
+  .logo-h .mark { flex-shrink: 0; }
+  .logo-h .text-block {}
+  .logo-h .wordmark {
+    font-size: 22px; font-weight: 500; letter-spacing: 0.02em; line-height: 1;
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  }
+  .logo-h .tagline {
+    font-size: 8.5px; letter-spacing: 0.24em; font-weight: 400;
+    margin-top: 3px; font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  }
+
+  /* ── COLOUR SWATCHES ── */
+  .swatch-row { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; margin-bottom: 12px; }
+  .swatch {
+    border-radius: var(--radius-md); padding: 20px 0 10px;
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .swatch-label { font-size: 11px; color: var(--ink-mute); margin-top: 6px; text-align: center; line-height: 1.4; }
+  .swatch-hex { font-size: 10px; color: var(--ink-faint); font-family: 'Courier New', monospace; }
+
+  .swatch-pair { display: flex; gap: 16px; margin-bottom: 12px; }
+  .swatch-lg {
+    width: 100%; height: 64px; border-radius: var(--radius-lg);
+    display: flex; align-items: flex-end; padding: 10px 14px;
+    font-size: 11px; font-weight: 500; letter-spacing: 0.06em;
+  }
+
+  /* ── TYPOGRAPHY ── */
+  .type-row {
+    display: flex; align-items: baseline; gap: 24px;
+    padding: 14px 0; border-bottom: 1px solid var(--hairline);
+  }
+  .type-row:last-child { border-bottom: none; }
+  .type-meta { width: 180px; flex-shrink: 0; }
+  .type-meta .token { font-size: 11px; font-family: 'Courier New', monospace; color: var(--emerald); }
+  .type-meta .spec { font-size: 11px; color: var(--ink-faint); margin-top: 2px; }
+  .type-sample { flex: 1; font-family: 'Inter', 'Helvetica Neue', sans-serif; color: var(--ink); }
+
+  /* ── SPACING ── */
+  .spacing-row { display: flex; align-items: center; gap: 16px; padding: 8px 0; }
+  .spacing-bar { background: var(--emerald); border-radius: 2px; height: 10px; flex-shrink: 0; }
+  .spacing-meta { font-size: 12px; }
+  .spacing-meta .tok { font-family: 'Courier New', monospace; color: var(--emerald); }
+  .spacing-meta .val { color: var(--ink-mute); margin-left: 8px; }
+
+  /* ── RADIUS ── */
+  .radius-row { display: flex; gap: 16px; flex-wrap: wrap; }
+  .radius-item { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .radius-box { width: 60px; height: 60px; background: var(--canvas-soft); border: 1px solid var(--hairline-strong); }
+  .radius-item span { font-size: 11px; color: var(--ink-mute); text-align: center; line-height: 1.4; }
+
+  /* ── DO / DON'T ── */
+  .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .rule-card { border-radius: var(--radius-lg); padding: 20px 24px; }
+  .rule-card.do { background: #f0fdf6; border: 1px solid #b4e8cf; }
+  .rule-card.dont { background: #fff5f5; border: 1px solid #f5c0c0; }
+  .rule-card .rule-head {
+    font-size: 11px; font-weight: 500; letter-spacing: 0.1em; margin-bottom: 12px;
+  }
+  .rule-card.do .rule-head { color: #0f6e56; }
+  .rule-card.dont .rule-head { color: #a32d2d; }
+  .rule-card ul { list-style: none; }
+  .rule-card ul li { font-size: 13px; padding: 5px 0; color: var(--ink-secondary); padding-left: 16px; position: relative; }
+  .rule-card ul li::before { position: absolute; left: 0; font-weight: 500; }
+  .rule-card.do ul li::before { content: '✓'; color: #1d9e75; }
+  .rule-card.dont ul li::before { content: '✕'; color: #e24b4a; }
+
+  /* ── USAGE CONTEXTS ── */
+  .usage-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .usage-item {
+    border: 1px solid var(--hairline); border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+  .usage-bg { height: 90px; display: flex; align-items: center; justify-content: center; }
+  .usage-caption { padding: 10px 14px; font-size: 11px; color: var(--ink-mute); border-top: 1px solid var(--hairline); }
+  .usage-caption strong { display: block; font-size: 12px; font-weight: 500; color: var(--ink); margin-bottom: 2px; }
+
+  /* ── CLEAR SPACE ── */
+  .clearspace-demo {
+    background: var(--canvas); border: 1px solid var(--hairline);
+    border-radius: var(--radius-lg); padding: 40px;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; margin-bottom: 16px;
+  }
+  .clearspace-inner {
+    border: 1.5px dashed #b4e8cf; padding: 20px;
+    border-radius: 4px; position: relative;
+  }
+  .clearspace-label {
+    position: absolute; font-size: 10px; color: #1d9e75;
+    font-family: 'Courier New', monospace; letter-spacing: 0.06em;
+  }
+  .clearspace-label.top { top: -18px; left: 50%; transform: translateX(-50%); }
+  .clearspace-label.bottom { bottom: -18px; left: 50%; transform: translateX(-50%); }
+  .clearspace-label.left { left: -28px; top: 50%; transform: translateY(-50%) rotate(-90deg); }
+  .clearspace-label.right { right: -28px; top: 50%; transform: translateY(-50%) rotate(90deg); }
+
+  /* ── FOOTER ── */
+  .doc-footer {
+    background: var(--canvas-night); color: #404040;
+    padding: 32px 40px; font-size: 12px; margin-top: 64px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .doc-footer span { color: #505050; }
+
+  /* ── MISC ── */
+  .pill {
+    display: inline-block; font-size: 11px; font-weight: 500;
+    padding: 2px 10px; border-radius: 999px; letter-spacing: 0.06em;
+  }
+  .pill-emerald { background: var(--emerald); color: #0d1a12; }
+  .pill-mute { background: #f0f0f0; color: var(--ink-mute); }
+  .note {
+    font-size: 12px; color: var(--ink-mute); background: #fafafa;
+    border-left: 3px solid var(--hairline-strong); padding: 10px 14px;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    margin-top: 12px;
+  }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+
+  hr.divider { border: none; border-top: 1px solid var(--hairline); margin: 28px 0; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ COVER ═══════════════ -->
+<div class="cover">
+  <div class="cover-grid"></div>
+  <div class="cover-mark">
+    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="9" y="6" width="5" height="28" rx="1.5" fill="#0d1a12"/>
+      <rect x="9" y="6" width="14" height="6" rx="1.5" fill="#0d1a12"/>
+      <rect x="9" y="17" width="13" height="5.5" rx="1.5" fill="#0d1a12"/>
+      <rect x="9" y="28" width="14" height="6" rx="1.5" fill="#0d1a12"/>
+      <rect x="18" y="6" width="9" height="16.5" rx="4.5" fill="#0d1a12"/>
+      <rect x="18.5" y="17" width="9.5" height="17" rx="4.75" fill="#0d1a12"/>
+      <rect x="19" y="12" width="6" height="6" fill="#3ecf8e"/>
+      <rect x="21" y="6" width="4" height="4" fill="#3ecf8e"/>
+    </svg>
+  </div>
+  <h1><span>BLICKSTRA</span><br>Brand Guidelines</h1>
+  <p class="cover-sub">STRATEGIC INTELLIGENCE FOR MALAYSIAN CONTRACTORS</p>
+  <div class="cover-meta">
+    <div class="cover-meta-item"><label>VERSION</label><span>1.0 — June 2026</span></div>
+    <div class="cover-meta-item"><label>DOMAIN</label><span>blickstra.com</span></div>
+    <div class="cover-meta-item"><label>LOGO DIRECTION</label><span>Option 1 — Solid Block B</span></div>
+    <div class="cover-meta-item"><label>PRIMARY COLOUR</label><span>#3ecf8e Emerald</span></div>
+  </div>
+</div>
+
+<div class="page">
+
+<!-- ═══════════════ 01 BRAND OVERVIEW ═══════════════ -->
+<div class="section-header">
+  <span class="section-num">01</span>
+  <h2>Brand Overview</h2>
+</div>
+
+<div class="two-col">
+  <div class="card">
+    <h3>BRAND NAME</h3>
+    <p style="font-size:32px;font-weight:500;letter-spacing:-0.4px;font-family:'Inter',sans-serif;">BLICKSTRA</p>
+    <p style="font-size:13px;color:var(--ink-mute);margin-top:8px;">Always all-capitals in the wordmark. Title case only in body copy ("Blickstra").</p>
+  </div>
+  <div class="card">
+    <h3>TAGLINE</h3>
+    <p style="font-size:18px;font-weight:500;letter-spacing:0.02em;font-family:'Inter',sans-serif;line-height:1.35;">Strategic Intelligence for Malaysian Contractors</p>
+    <p style="font-size:13px;color:var(--ink-mute);margin-top:8px;">Primary EN tagline. BM: "Risikan Tender Strategik untuk Kontraktor Malaysia"</p>
+  </div>
+</div>
+
+<div class="two-col">
+  <div class="card">
+    <h3>ETYMOLOGY</h3>
+    <p style="font-size:13px;color:var(--ink-secondary);line-height:1.7;">
+      <strong>Blick</strong> (German) — sight, view, strategic vision<br>
+      <strong>Stra</strong> — Strategy, derived from "strategik"<br><br>
+      Combined: <em>Strategic Vision</em> — the ability to see opportunities before others do.
+    </p>
+  </div>
+  <div class="card">
+    <h3>BRAND PERSONALITY</h3>
+    <p style="font-size:13px;color:var(--ink-secondary);line-height:1.8;">
+      Precision &amp; intelligence — sharp, geometric<br>
+      Quietly technical — minimal, no decorative noise<br>
+      Premium B2B SaaS — engineered, not playful<br>
+      Trustworthy — for contractors staking business on it
+    </p>
+  </div>
+</div>
+
+
+<!-- ═══════════════ 02 LOGO ═══════════════ -->
+<div class="section-header">
+  <span class="section-num">02</span>
+  <h2>Logo</h2>
+</div>
+
+<!-- PRIMARY LOCKUP -->
+<div class="card" style="margin-bottom:16px;">
+  <h3>PRIMARY LOCKUP — HORIZONTAL (LIGHT BG)</h3>
+  <div style="display:flex;align-items:center;gap:16px;padding:20px 0;">
+    <!-- Mark 64px -->
+    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="64" height="64" rx="11" fill="#3ecf8e"/>
+      <rect x="15" y="11" width="8" height="42" rx="2" fill="#0d1a12"/>
+      <rect x="15" y="11" width="22" height="8" rx="2" fill="#0d1a12"/>
+      <rect x="15" y="28.5" width="20" height="7" rx="2" fill="#0d1a12"/>
+      <rect x="15" y="45" width="22" height="8" rx="2" fill="#0d1a12"/>
+      <rect x="30" y="11" width="14" height="25.5" rx="7" fill="#0d1a12"/>
+      <rect x="31" y="28.5" width="15" height="24.5" rx="7.5" fill="#0d1a12"/>
+      <rect x="32" y="19" width="9.5" height="9.5" fill="#3ecf8e"/>
+      <rect x="34" y="11" width="6" height="5" fill="#3ecf8e"/>
+    </svg>
+    <div>
+      <p style="font-family:'Inter','Helvetica Neue',sans-serif;font-size:28px;font-weight:500;letter-spacing:0.02em;line-height:1;color:#171717;">BLICKSTRA</p>
+      <p style="font-family:'Inter','Helvetica Neue',sans-serif;font-size:10px;font-weight:400;letter-spacing:0.28em;color:#707070;margin-top:5px;">STRATEGIC INTELLIGENCE</p>
+    </div>
+  </div>
+  <p style="font-size:12px;color:var(--ink-faint);">Mark 64×64 · Wordmark Inter 500 28px · Tagline 10px tracked 0.28em</p>
+</div>
+
+<!-- DARK BG LOCKUP -->
+<div class="card-dark" style="margin-bottom:16px;">
+  <h3>PRIMARY LOCKUP — HORIZONTAL (DARK BG)</h3>
+  <div style="display:flex;align-items:center;gap:16px;padding:20px 0;">
+    <svg width="56" height="56" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="64" height="64" rx="11" fill="#3ecf8e"/>
+      <rect x="15" y="11" width="8" height="42" rx="2" fill="#0d1a12"/>
+      <rect x="15" y="11" width="22" height="8" rx="2" fill="#0d1a12"/>
+      <rect x="15" y="28.5" width="20" height="7" rx="2" fill="#0d1a12"/>
+      <rect x="15" y="45" width="22" height="8" rx="2" fill="#0d1a12"/>
+      <rect x="30" y="11" width="14" height="25.5" rx="7" fill="#0d1a12"/>
+      <rect x="31" y="28.5" width="15" height="24.5" rx="7.5" fill="#0d1a12"/>
+      <rect x="32" y="19" width="9.5" height="9.5" fill="#3ecf8e"/>
+      <rect x="34" y="11" width="6" height="5" fill="#3ecf8e"/>
+    </svg>
+    <div>
+      <p style="font-family:'Inter','Helvetica Neue',sans-serif;font-size:26px;font-weight:500;letter-spacing:0.02em;line-height:1;color:#ffffff;">BLICKSTRA</p>
+      <p style="font-family:'Inter','Helvetica Neue',sans-serif;font-size:9.5px;font-weight:400;letter-spacing:0.26em;color:#3ecf8e;margin-top:5px;">STRATEGIC INTELLIGENCE</p>
+    </div>
+  </div>
+  <p style="font-size:12px;color:#404040;">On dark: wordmark white · tagline in emerald · mark unchanged</p>
+</div>
+
+<!-- FOUR LOCKUP VARIANTS -->
+<div class="lockup-grid" style="margin-bottom:16px;">
+
+  <div class="lockup-box">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <svg width="36" height="36" viewBox="0 0 64 64" fill="none">
+        <rect width="64" height="64" rx="11" fill="#3ecf8e"/>
+        <rect x="15" y="11" width="8" height="42" rx="2" fill="#0d1a12"/>
+        <rect x="15" y="11" width="22" height="8" rx="2" fill="#0d1a12"/>
+        <rect x="15" y="28.5" width="20" height="7" rx="2" fill="#0d1a12"/>
+        <rect x="15" y="45" width="22" height="8" rx="2" fill="#0d1a12"/>
+        <rect x="30" y="11" width="14" height="25.5" rx="7" fill="#0d1a12"/>
+        <rect x="31" y="28.5" width="15" height="24.5" rx="7.5" fill="#0d1a12"/>
+        <rect x="32" y="19" width="9.5" height="9.5" fill="#3ecf8e"/>
+        <rect x="34" y="11" width="6" height="5" fill="#3ecf8e"/>
+      </svg>
+      <span style="font-family:'Inter',sans-serif;font-size:17px;font-weight:500;letter-spacing:0.02em;color:#171717;">BLICKSTRA</span>
+    </div>
+    <p class="lockup-label">Compact nav · 36px mark · no tagline</p>
+  </div>
+
+  <div class="lockup-box dark">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <svg width="36" height="36" viewBox="0 0 64 64" fill="none">
+        <rect width="64" height="64" rx="11" fill="#3ecf8e"/>
+        <rect x="15" y="11" width="8" height="42" rx="2" fill="#0d1a12"/>
+        <rect x="15" y="11" width="22" height="8" rx="2" fill="#0d1a12"/>
+        <rect x="15" y="28.5" width="20" height="7" rx="2" fill="#0d1a12"/>
+        <rect x="15" y="45" width="22" height="8" rx="2" fill="#0d1a12"/>
+        <rect x="30" y="11" width="14" height="25.5" rx="7" fill="#0d1a12"/>
+        <rect x="31" y="28.5" width="15" height="24.5" rx="7.5" fill="#0d1a12"/>
+        <rect x="32" y="19" width="9.5" height="9.5" fill="#3ecf8e"/>
+        <rect x="34" y="11" width="6" height="5" fill="#3ecf8e"/>
+      </svg>
+      <span style="font-family:'Inter',sans-serif;font-size:17px;font-weight:500;letter-spacing:0.02em;color:#ffffff;">BLICKSTRA</span>
+    </div>
+    <p class="lockup-label" style="color:#404040;">Compact nav · dark sidebar variant</p>
+  </div>
+
+  <div class="lockup-box" style="flex-direction:column;gap:12px;">
+    <svg width="48" height="48" viewBox="0 0 64 64" fill="none">
+      <rect width="64" height="64" rx="11" fill="#3ecf8e"/>
+      <rect x="15" y="11" width="8" height="42" rx="2" fill="#0d1a12"/>
+      <rect x="15" y="11" width="22" height="8" rx="2" fill="#0d1a12"/>
+      <rect x="15" y="28.5" width="20" height="7" rx="2" fill="#0d1a12"/>
+      <rect x="15" y="45" width="22" height="8" rx="2" fill="#0d1a12"/>
+      <rect x="30" y="11" width="14" height="25.5" rx="7" fill="#0d1a12"/>
+      <rect x="31" y="28.5" width="15" height="24.5" rx="7.5" fill="#0d1a12"/>
+      <rect x="32" y="19" width="9.5" height="9.5" fill="#3ecf8e"/>
+      <rect x="34" y="11" width="6" height="5" fill="#3ecf8e"/>
+    </svg>
+    <p class="lockup-label">Standalone mark · app icon · avatar</p>
+  </div>
+
+  <div class="lockup-box" style="flex-direction:column;gap:6px;">
+    <!-- Favicon sizes -->
+    <div style="display:flex;align-items:flex-end;gap:14px;">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+        <svg width="32" height="32" viewBox="0 0 64 64" fill="none">
+          <rect width="64" height="64" rx="11" fill="#3ecf8e"/>
+          <rect x="15" y="11" width="8" height="42" rx="2" fill="#0d1a12"/>
+          <rect x="15" y="11" width="22" height="8" rx="2" fill="#0d1a12"/>
+          <rect x="15" y="28.5" width="20" height="7" rx="2" fill="#0d1a12"/>
+          <rect x="15" y="45" width="22" height="8" rx="2" fill="#0d1a12"/>
+          <rect x="30" y="11" width="14" height="25.5" rx="7" fill="#0d1a12"/>
+          <rect x="31" y="28.5" width="15" height="24.5" rx="7.5" fill="#0d1a12"/>
+          <rect x="32" y="19" width="9.5" height="9.5" fill="#3ecf8e"/>
+          <rect x="34" y="11" width="6" height="5" fill="#3ecf8e"/>
+        </svg>
+        <span style="font-size:10px;color:var(--ink-faint);">32px</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+        <svg width="20" height="20" viewBox="0 0 64 64" fill="none">
+          <rect width="64" height="64" rx="11" fill="#3ecf8e"/>
+          <rect x="15" y="11" width="8" height="42" rx="2" fill="#0d1a12"/>
+          <rect x="15" y="11" width="22" height="8" rx="2" fill="#0d1a12"/>
+          <rect x="15" y="28.5" width="20" height="7" rx="2" fill="#0d1a12"/>
+          <rect x="15" y="45" width="22" height="8" rx="2" fill="#0d1a12"/>
+          <rect x="30" y="11" width="14" height="25.5" rx="7" fill="#0d1a12"/>
+          <rect x="31" y="28.5" width="15" height="24.5" rx="7.5" fill="#0d1a12"/>
+          <rect x="32" y="19" width="9.5" height="9.5" fill="#3ecf8e"/>
+          <rect x="34" y="11" width="6" height="5" fill="#3ecf8e"/>
+        </svg>
+        <span style="font-size:10px;color:var(--ink-faint);">20px</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+        <svg width="16" height="16" viewBox="0 0 64 64" fill="none">
+          <rect width="64" height="64" rx="11" fill="#3ecf8e"/>
+          <rect x="15" y="11" width="8" height="42" rx="2" fill="#0d1a12"/>
+          <rect x="15" y="11" width="22" height="8" rx="2" fill="#0d1a12"/>
+          <rect x="15" y="28.5" width="20" height="7" rx="2" fill="#0d1a12"/>
+          <rect x="15" y="45" width="22" height="8" rx="2" fill="#0d1a12"/>
+          <rect x="30" y="11" width="14" height="25.5" rx="7" fill="#0d1a12"/>
+          <rect x="31" y="28.5" width="15" height="24.5" rx="7.5" fill="#0d1a12"/>
+          <rect x="32" y="19" width="9.5" height="9.5" fill="#3ecf8e"/>
+          <rect x="34" y="11" width="6" height="5" fill="#3ecf8e"/>
+        </svg>
+        <span style="font-size:10px;color:var(--ink-faint);">16px</span>
+      </div>
+    </div>
+    <p class="lockup-label">Favicon scale test — all sizes legible</p>
+  </div>
+
+</div>
+
+<!-- CLEAR SPACE -->
+<div class="card">
+  <h3>CLEAR SPACE RULE</h3>
+  <div class="clearspace-demo">
+    <div class="clearspace-inner">
+      <span class="clearspace-label top">1× mark height</span>
+      <span class="clearspace-label bottom">1× mark height</span>
+      <span class="clearspace-label left">1×</span>
+      <span class="clearspace-label right">1×</span>
+      <div style="display:flex;align-items:center;gap:12px;padding:4px;">
+        <svg width="48" height="48" viewBox="0 0 64 64" fill="none">
+          <rect width="64" height="64" rx="11" fill="#3ecf8e"/>
+          <rect x="15" y="11" width="8" height="42" rx="2" fill="#0d1a12"/>
+          <rect x="15" y="11" width="22" height="8" rx="2" fill="#0d1a12"/>
+          <rect x="15" y="28.5" width="20" height="7" rx="2" fill="#0d1a12"/>
+          <rect x="15" y="45" width="22" height="8" rx="2" fill="#0d1a12"/>
+          <rect x="30" y="11" width="14" height="25.5" rx="7" fill="#0d1a12"/>
+          <rect x="31" y="28.5" width="15" height="24.5" rx="7.5" fill="#0d1a12"/>
+          <rect x="32" y="19" width="9.5" height="9.5" fill="#3ecf8e"/>
+          <rect x="34" y="11" width="6" height="5" fill="#3ecf8e"/>
+        </svg>
+        <div>
+          <p style="font-family:'Inter',sans-serif;font-size:22px;font-weight:500;letter-spacing:0.02em;color:#171717;">BLICKSTRA</p>
+          <p style="font-family:'Inter',sans-serif;font-size:9px;letter-spacing:0.24em;color:#707070;margin-top:3px;">STRATEGIC INTELLIGENCE</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p style="font-size:12px;color:var(--ink-mute);">Maintain clear space equal to the mark height on all four sides. No other elements, text, or imagery within this zone.</p>
+</div>
+
+
+<!-- ═══════════════ 03 COLOUR ═══════════════ -->
+<div class="section-header">
+  <span class="section-num">03</span>
+  <h2>Colour System</h2>
+</div>
+
+<div class="card">
+  <h3>PRIMARY PALETTE</h3>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px;">
+    <div>
+      <div style="height:80px;background:#3ecf8e;border-radius:var(--radius-lg);margin-bottom:10px;"></div>
+      <p style="font-size:13px;font-weight:500;">Emerald Primary</p>
+      <p style="font-size:11px;color:var(--ink-mute);font-family:'Courier New',monospace;">#3ecf8e</p>
+      <p style="font-size:11px;color:var(--ink-faint);">CTAs · Logo mark · Active nav</p>
+    </div>
+    <div>
+      <div style="height:80px;background:#24b47e;border-radius:var(--radius-lg);margin-bottom:10px;"></div>
+      <p style="font-size:13px;font-weight:500;">Emerald Deep</p>
+      <p style="font-size:11px;color:var(--ink-mute);font-family:'Courier New',monospace;">#24b47e</p>
+      <p style="font-size:11px;color:var(--ink-faint);">Hover · Pressed state</p>
+    </div>
+    <div>
+      <div style="height:80px;background:#4ade80;border-radius:var(--radius-lg);margin-bottom:10px;"></div>
+      <p style="font-size:13px;font-weight:500;">Emerald Soft</p>
+      <p style="font-size:11px;color:var(--ink-mute);font-family:'Courier New',monospace;">#4ade80</p>
+      <p style="font-size:11px;color:var(--ink-faint);">Tint backgrounds · Highlight</p>
+    </div>
+  </div>
+
+  <hr class="divider"/>
+  <h3 style="margin-bottom:16px;">NEUTRAL PALETTE</h3>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;">
+    <div>
+      <div style="height:56px;background:#09090b;border-radius:var(--radius-md);margin-bottom:8px;"></div>
+      <p style="font-size:12px;font-weight:500;">Canvas Night</p>
+      <p style="font-size:11px;color:var(--ink-mute);font-family:'Courier New',monospace;">#09090b</p>
+    </div>
+    <div>
+      <div style="height:56px;background:#171717;border-radius:var(--radius-md);margin-bottom:8px;"></div>
+      <p style="font-size:12px;font-weight:500;">Ink</p>
+      <p style="font-size:11px;color:var(--ink-mute);font-family:'Courier New',monospace;">#171717</p>
+    </div>
+    <div>
+      <div style="height:56px;background:#707070;border-radius:var(--radius-md);margin-bottom:8px;"></div>
+      <p style="font-size:12px;font-weight:500;">Ink Mute</p>
+      <p style="font-size:11px;color:var(--ink-mute);font-family:'Courier New',monospace;">#707070</p>
+    </div>
+    <div>
+      <div style="height:56px;background:#ffffff;border-radius:var(--radius-md);border:1px solid var(--hairline);margin-bottom:8px;"></div>
+      <p style="font-size:12px;font-weight:500;">Canvas</p>
+      <p style="font-size:11px;color:var(--ink-mute);font-family:'Courier New',monospace;">#ffffff</p>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h3>COLOUR USAGE RULE — EMERALD SCARCITY</h3>
+  <p style="font-size:13px;color:var(--ink-secondary);line-height:1.7;margin-bottom:16px;">
+    Emerald <code style="background:#f0fdf6;color:#0f6e56;padding:1px 6px;border-radius:4px;font-size:12px;">#3ecf8e</code> is the sole chromatic accent in the brand system.
+    It must appear <strong>once per viewport</strong> — either as a filled CTA button, the logo mark, or an active nav state. Never both simultaneously.
+    This scarcity is what gives it visual power.
+  </p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+    <div style="background:#f0fdf6;border:1px solid #b4e8cf;border-radius:var(--radius-md);padding:14px 16px;">
+      <p style="font-size:11px;font-weight:500;color:#0f6e56;letter-spacing:0.08em;margin-bottom:8px;">CORRECT USE</p>
+      <p style="font-size:12px;color:#0d2a1c;line-height:1.6;">Logo mark on page header — no other emerald element visible on same scroll position</p>
+    </div>
+    <div style="background:#fff5f5;border:1px solid #f5c0c0;border-radius:var(--radius-md);padding:14px 16px;">
+      <p style="font-size:11px;font-weight:500;color:#a32d2d;letter-spacing:0.08em;margin-bottom:8px;">INCORRECT USE</p>
+      <p style="font-size:12px;color:#4a1515;line-height:1.6;">Emerald logo + emerald CTA button + emerald active nav all visible at once</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════ 04 TYPOGRAPHY ═══════════════ -->
+<div class="section-header">
+  <span class="section-num">04</span>
+  <h2>Typography</h2>
+</div>
+
+<div class="card">
+  <h3>TYPEFACE</h3>
+  <p style="font-size:36px;font-weight:500;letter-spacing:-0.6px;font-family:'Inter',sans-serif;margin-bottom:6px;">Inter</p>
+  <p style="font-size:13px;color:var(--ink-mute);margin-bottom:16px;">Primary typeface for all Blickstra digital surfaces. Open-source, Google Fonts. Fallback: 'Helvetica Neue', Helvetica, Arial, sans-serif.</p>
+  <div style="display:flex;gap:24px;margin-bottom:16px;">
+    <div>
+      <p style="font-size:28px;font-weight:400;font-family:'Inter',sans-serif;letter-spacing:-0.3px;">Regular 400</p>
+      <p style="font-size:11px;color:var(--ink-faint);">Body copy, descriptions, labels</p>
+    </div>
+    <div>
+      <p style="font-size:28px;font-weight:500;font-family:'Inter',sans-serif;letter-spacing:-0.3px;">Medium 500</p>
+      <p style="font-size:11px;color:var(--ink-faint);">Headings, wordmark, CTAs — cap at 500</p>
+    </div>
+  </div>
+  <div class="note">Never exceed weight 500 in display. The brand's calibrated mid-weight breaks at 600+.</div>
+</div>
+
+<div class="card">
+  <h3>TYPE SCALE</h3>
+  <div class="type-row">
+    <div class="type-meta"><span class="token">display-xxl</span><br><span class="spec">64px / 500 / -1.92px</span></div>
+    <p class="type-sample" style="font-size:48px;font-weight:500;letter-spacing:-1.44px;line-height:1.1;">BLICKSTRA</p>
+  </div>
+  <div class="type-row">
+    <div class="type-meta"><span class="token">display-xl</span><br><span class="spec">48px / 500 / -1.44px</span></div>
+    <p class="type-sample" style="font-size:36px;font-weight:500;letter-spacing:-1.08px;line-height:1.1;">Strategic Intelligence</p>
+  </div>
+  <div class="type-row">
+    <div class="type-meta"><span class="token">display-lg</span><br><span class="spec">36px / 500 / -0.72px</span></div>
+    <p class="type-sample" style="font-size:30px;font-weight:500;letter-spacing:-0.6px;line-height:1.15;">Tender Intelligence</p>
+  </div>
+  <div class="type-row">
+    <div class="type-meta"><span class="token">display-md</span><br><span class="spec">28px / 500 / -0.42px</span></div>
+    <p class="type-sample" style="font-size:24px;font-weight:500;letter-spacing:-0.36px;line-height:1.2;">10 Government Portals</p>
+  </div>
+  <div class="type-row">
+    <div class="type-meta"><span class="token">heading-lg</span><br><span class="spec">22px / 500 / 0</span></div>
+    <p class="type-sample" style="font-size:22px;font-weight:500;line-height:1.2;">AI Matching Score</p>
+  </div>
+  <div class="type-row">
+    <div class="type-meta"><span class="token">body-lg</span><br><span class="spec">18px / 400 / 0</span></div>
+    <p class="type-sample" style="font-size:18px;font-weight:400;line-height:1.55;">Blickstra monitors JKR, MOH, TNB and 7 more portals automatically.</p>
+  </div>
+  <div class="type-row">
+    <div class="type-meta"><span class="token">body-md</span><br><span class="spec">16px / 400 / 0</span></div>
+    <p class="type-sample" style="font-size:16px;font-weight:400;line-height:1.5;">Default UI body text for dashboard, cards and settings.</p>
+  </div>
+  <div class="type-row">
+    <div class="type-meta"><span class="token">button-md</span><br><span class="spec">14px / 500 / 0</span></div>
+    <p class="type-sample" style="font-size:14px;font-weight:500;line-height:1.0;">Get Started Free</p>
+  </div>
+  <div class="type-row">
+    <div class="type-meta"><span class="token">micro</span><br><span class="spec">12px / 400 / 0</span></div>
+    <p class="type-sample" style="font-size:12px;font-weight:400;line-height:1.45;">Pill label · Fine print · Helper text</p>
+  </div>
+  <div class="type-row">
+    <div class="type-meta"><span class="token">code</span><br><span class="spec">14px / 400 mono</span></div>
+    <p class="type-sample" style="font-size:14px;font-weight:400;line-height:1.5;font-family:'Courier New',monospace;">portal_slug: "jkr_malaysia"</p>
+  </div>
+</div>
+
+
+<!-- ═══════════════ 05 SPACING & RADIUS ═══════════════ -->
+<div class="section-header">
+  <span class="section-num">05</span>
+  <h2>Spacing &amp; Shape</h2>
+</div>
+
+<div class="two-col">
+  <div class="card">
+    <h3>SPACING SCALE (BASE 8PX)</h3>
+    <div class="spacing-row"><div class="spacing-bar" style="width:2px;"></div><span class="spacing-meta"><span class="tok">xxs</span><span class="val">2px</span></span></div>
+    <div class="spacing-row"><div class="spacing-bar" style="width:4px;"></div><span class="spacing-meta"><span class="tok">xs</span><span class="val">4px</span></span></div>
+    <div class="spacing-row"><div class="spacing-bar" style="width:8px;"></div><span class="spacing-meta"><span class="tok">sm</span><span class="val">8px</span></span></div>
+    <div class="spacing-row"><div class="spacing-bar" style="width:12px;"></div><span class="spacing-meta"><span class="tok">md</span><span class="val">12px</span></span></div>
+    <div class="spacing-row"><div class="spacing-bar" style="width:16px;"></div><span class="spacing-meta"><span class="tok">lg</span><span class="val">16px</span></span></div>
+    <div class="spacing-row"><div class="spacing-bar" style="width:24px;"></div><span class="spacing-meta"><span class="tok">xl</span><span class="val">24px</span></span></div>
+    <div class="spacing-row"><div class="spacing-bar" style="width:32px;"></div><span class="spacing-meta"><span class="tok">xxl</span><span class="val">32px</span></span></div>
+    <div class="spacing-row"><div class="spacing-bar" style="width:64px;"></div><span class="spacing-meta"><span class="tok">huge</span><span class="val">64px · section padding</span></span></div>
+  </div>
+  <div class="card">
+    <h3>BORDER RADIUS SCALE</h3>
+    <div class="radius-row">
+      <div class="radius-item">
+        <div class="radius-box" style="border-radius:4px;"></div>
+        <span><code style="font-size:10px;">xs</code><br>4px<br>Inputs</span>
+      </div>
+      <div class="radius-item">
+        <div class="radius-box" style="border-radius:6px;"></div>
+        <span><code style="font-size:10px;">sm</code><br>6px<br>Buttons</span>
+      </div>
+      <div class="radius-item">
+        <div class="radius-box" style="border-radius:8px;"></div>
+        <span><code style="font-size:10px;">md</code><br>8px<br>Compact</span>
+      </div>
+      <div class="radius-item">
+        <div class="radius-box" style="border-radius:12px;"></div>
+        <span><code style="font-size:10px;">lg</code><br>12px<br>Cards</span>
+      </div>
+      <div class="radius-item">
+        <div class="radius-box" style="border-radius:16px;"></div>
+        <span><code style="font-size:10px;">xl</code><br>16px<br>Modals</span>
+      </div>
+    </div>
+    <div class="note" style="margin-top:16px;">Logo mark uses 12px (lg) — matches card radius for visual consistency.</div>
+  </div>
+</div>
+
+
+<!-- ═══════════════ 06 COMPONENTS ═══════════════ -->
+<div class="section-header">
+  <span class="section-num">06</span>
+  <h2>Core Components</h2>
+</div>
+
+<div class="card">
+  <h3>BUTTONS</h3>
+  <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:8px 0 16px;">
+    <button style="background:#3ecf8e;color:#0d1a12;border:none;padding:8px 16px;border-radius:6px;font-size:14px;font-weight:500;font-family:'Inter',sans-serif;cursor:pointer;">Get Started Free</button>
+    <button style="background:#ffffff;color:#171717;border:1px solid #c7c7c7;padding:8px 16px;border-radius:6px;font-size:14px;font-weight:500;font-family:'Inter',sans-serif;cursor:pointer;">Learn More</button>
+    <button style="background:#09090b;color:#ffffff;border:1px solid #2a2a2a;padding:8px 16px;border-radius:6px;font-size:14px;font-weight:500;font-family:'Inter',sans-serif;cursor:pointer;">View Dashboard</button>
+    <button style="background:transparent;color:#171717;border:none;padding:8px 0;border-radius:6px;font-size:14px;font-weight:500;font-family:'Inter',sans-serif;cursor:pointer;text-decoration:underline;text-underline-offset:2px;">Sign In</button>
+  </div>
+  <table style="width:100%;font-size:12px;border-collapse:collapse;">
+    <tr style="background:#fafafa;">
+      <td style="padding:8px 12px;color:var(--ink-mute);width:160px;border-bottom:1px solid var(--hairline);">Primary Green</td>
+      <td style="padding:8px 12px;font-family:'Courier New',monospace;border-bottom:1px solid var(--hairline);">#3ecf8e bg · #0d1a12 text · 6px radius</td>
+    </tr>
+    <tr>
+      <td style="padding:8px 12px;color:var(--ink-mute);border-bottom:1px solid var(--hairline);">Secondary Outline</td>
+      <td style="padding:8px 12px;font-family:'Courier New',monospace;border-bottom:1px solid var(--hairline);">#fff bg · #171717 text · #c7c7c7 border · 6px radius</td>
+    </tr>
+    <tr style="background:#fafafa;">
+      <td style="padding:8px 12px;color:var(--ink-mute);border-bottom:1px solid var(--hairline);">On Dark</td>
+      <td style="padding:8px 12px;font-family:'Courier New',monospace;border-bottom:1px solid var(--hairline);">#09090b bg · #fff text · #2a2a2a border · 6px radius</td>
+    </tr>
+    <tr>
+      <td style="padding:8px 12px;color:var(--ink-mute);">Link</td>
+      <td style="padding:8px 12px;font-family:'Courier New',monospace;">Transparent · #171717 · underline offset 2px · no radius</td>
+    </tr>
+  </table>
+  <div class="note" style="margin-top:14px;">Primary green button uses near-black text (#0d1a12), NOT white. The emerald reads as a "lit" surface — dark type is the brand's signature choice.</div>
+</div>
+
+<div class="card">
+  <h3>PILLS &amp; TAGS</h3>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;padding:8px 0 16px;">
+    <span style="background:#3ecf8e;color:#0d1a12;font-size:11px;font-weight:500;padding:3px 10px;border-radius:999px;font-family:'Inter',sans-serif;letter-spacing:0.04em;">NEW</span>
+    <span style="background:#e8faf3;color:#0f6e56;font-size:11px;font-weight:500;padding:3px 10px;border-radius:999px;font-family:'Inter',sans-serif;">LIVE</span>
+    <span style="background:#fafafa;color:#707070;font-size:11px;padding:3px 10px;border-radius:999px;font-family:'Inter',sans-serif;border:1px solid #e0e0e0;">Coming soon</span>
+    <span style="background:#09090b;color:#3ecf8e;font-size:11px;font-weight:500;padding:3px 10px;border-radius:999px;font-family:'Inter',sans-serif;">Score: 87</span>
+  </div>
+</div>
+
+
+<!-- ═══════════════ 07 USAGE CONTEXTS ═══════════════ -->
+<div class="section-header">
+  <span class="section-num">07</span>
+  <h2>Logo Usage Contexts</h2>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px;">
+
+  <div style="border:1px solid var(--hairline);border-radius:var(--radius-lg);overflow:hidden;">
+    <div style="height:100px;background:#ffffff;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--hairline);">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <svg width="32" height="32" viewBox="0 0 64 64" fill="none"><rect width="64" height="64" rx="11" fill="#3ecf8e"/><rect x="15" y="11" width="8" height="42" rx="2" fill="#0d1a12"/><rect x="15" y="11" width="22" height="8" rx="2" fill="#0d1a12"/><rect x="15" y="28.5" width="20" height="7" rx="2" fill="#0d1a12"/><rect x="15" y="45" width="22" height="8" rx="2" fill="#0d1a12"/><rect x="30" y="11" width="14" height="25.5" rx="7" fill="#0d1a12"/><rect x="31" y="28.5" width="15" height="24.5" rx="7.5" fill="#0d1a12"/><rect x="32" y="19" width="9.5" height="9.5" fill="#3ecf8e"/><rect x="34" y="11" width="6" height="5" fill="#3ecf8e"/></svg>
+        <span style="font-family:'Inter',sans-serif;font-size:15px;font-weight:500;letter-spacing:0.02em;color:#171717;">BLICKSTRA</span>
+      </div>
+    </div>
+    <div style="padding:10px 14px;">
+      <p style="font-size:12px;font-weight:500;margin-bottom:2px;">Landing page nav</p>
+      <p style="font-size:11px;color:var(--ink-mute);">White bg · compact lockup</p>
+    </div>
+  </div>
+
+  <div style="border:1px solid var(--hairline);border-radius:var(--radius-lg);overflow:hidden;">
+    <div style="height:100px;background:#09090b;display:flex;align-items:center;justify-content:center;border-bottom:1px solid #1f1f1f;">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <svg width="32" height="32" viewBox="0 0 64 64" fill="none"><rect width="64" height="64" rx="11" fill="#3ecf8e"/><rect x="15" y="11" width="8" height="42" rx="2" fill="#0d1a12"/><rect x="15" y="11" width="22" height="8" rx="2" fill="#0d1a12"/><rect x="15" y="28.5" width="20" height="7" rx="2" fill="#0d1a12"/><rect x="15" y="45" width="22" height="8" rx="2" fill="#0d1a12"/><rect x="30" y="11" width="14" height="25.5" rx="7" fill="#0d1a12"/><rect x="31" y="28.5" width="15" height="24.5" rx="7.5" fill="#0d1a12"/><rect x="32" y="19" width="9.5" height="9.5" fill="#3ecf8e"/><rect x="34" y="11" width="6" height="5" fill="#3ecf8e"/></svg>
+        <span style="font-family:'Inter',sans-serif;font-size:15px;font-weight:500;letter-spacing:0.02em;color:#ffffff;">BLICKSTRA</span>
+      </div>
+    </div>
+    <div style="padding:10px 14px;">
+      <p style="font-size:12px;font-weight:500;margin-bottom:2px;">Dashboard sidebar</p>
+      <p style="font-size:11px;color:var(--ink-mute);">Dark canvas · white wordmark</p>
+    </div>
+  </div>
+
+  <div style="border:1px solid var(--hairline);border-radius:var(--radius-lg);overflow:hidden;">
+    <div style="height:100px;background:#fafafa;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--hairline);">
+      <svg width="48" height="48" viewBox="0 0 64 64" fill="none"><rect width="64" height="64" rx="11" fill="#3ecf8e"/><rect x="15" y="11" width="8" height="42" rx="2" fill="#0d1a12"/><rect x="15" y="11" width="22" height="8" rx="2" fill="#0d1a12"/><rect x="15" y="28.5" width="20" height="7" rx="2" fill="#0d1a12"/><rect x="15" y="45" width="22" height="8" rx="2" fill="#0d1a12"/><rect x="30" y="11" width="14" height="25.5" rx="7" fill="#0d1a12"/><rect x="31" y="28.5" width="15" height="24.5" rx="7.5" fill="#0d1a12"/><rect x="32" y="19" width="9.5" height="9.5" fill="#3ecf8e"/><rect x="34" y="11" width="6" height="5" fill="#3ecf8e"/></svg>
+    </div>
+    <div style="padding:10px 14px;">
+      <p style="font-size:12px;font-weight:500;margin-bottom:2px;">App icon / Telegram</p>
+      <p style="font-size:11px;color:var(--ink-mute);">Mark only · no wordmark</p>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════ 08 DO'S AND DON'TS ═══════════════ -->
+<div class="section-header">
+  <span class="section-num">08</span>
+  <h2>Do's &amp; Don'ts</h2>
+</div>
+
+<div class="rules-grid">
+  <div class="rule-card do">
+    <p class="rule-head">DO</p>
+    <ul>
+      <li>Use all-caps BLICKSTRA in the wordmark</li>
+      <li>Use near-black text (#0d1a12) on the emerald button</li>
+      <li>Keep emerald as the single chromatic accent per viewport</li>
+      <li>Use Inter weight 500 for all display headings</li>
+      <li>Maintain 12px (lg) radius on the logo mark</li>
+      <li>Use 6px (sm) radius on all buttons</li>
+      <li>Use white canvas (#ffffff) as the primary background</li>
+      <li>Apply negative letter-spacing on display type</li>
+    </ul>
+  </div>
+  <div class="rule-card dont">
+    <p class="rule-head">DON'T</p>
+    <ul>
+      <li>Use white text on the emerald CTA button</li>
+      <li>Stretch, rotate, or distort the logo mark</li>
+      <li>Use the logo on busy photographic backgrounds</li>
+      <li>Introduce additional accent colours (no blue, red, orange as brand)</li>
+      <li>Use font weight 600 or 700 anywhere in the UI</li>
+      <li>Use pill-shaped buttons (brand radius is square-ish 6px)</li>
+      <li>Add gradients or atmospheric backgrounds behind the hero</li>
+      <li>Place the wordmark below minimum size (20px height)</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ═══════════════ 09 MINIMUM SIZE ═══════════════ -->
+<div class="section-header">
+  <span class="section-num">09</span>
+  <h2>Minimum Size &amp; Misuse</h2>
+</div>
+
+<div class="card">
+  <h3>MINIMUM REPRODUCTION SIZES</h3>
+  <table style="width:100%;font-size:13px;border-collapse:collapse;">
+    <thead>
+      <tr style="background:#fafafa;">
+        <th style="text-align:left;padding:10px 14px;font-weight:500;border-bottom:1px solid var(--hairline);color:var(--ink-mute);font-size:11px;letter-spacing:0.06em;">LOCKUP</th>
+        <th style="text-align:left;padding:10px 14px;font-weight:500;border-bottom:1px solid var(--hairline);color:var(--ink-mute);font-size:11px;letter-spacing:0.06em;">DIGITAL MIN</th>
+        <th style="text-align:left;padding:10px 14px;font-weight:500;border-bottom:1px solid var(--hairline);color:var(--ink-mute);font-size:11px;letter-spacing:0.06em;">PRINT MIN</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding:10px 14px;border-bottom:1px solid var(--hairline);">Combined (mark + wordmark)</td><td style="padding:10px 14px;border-bottom:1px solid var(--hairline);">Mark height 24px</td><td style="padding:10px 14px;border-bottom:1px solid var(--hairline);">Mark height 8mm</td></tr>
+      <tr style="background:#fafafa;"><td style="padding:10px 14px;border-bottom:1px solid var(--hairline);">Mark only</td><td style="padding:10px 14px;border-bottom:1px solid var(--hairline);">16×16px (favicon)</td><td style="padding:10px 14px;border-bottom:1px solid var(--hairline);">5mm × 5mm</td></tr>
+      <tr><td style="padding:10px 14px;">Wordmark only</td><td style="padding:10px 14px;">Height 20px</td><td style="padding:10px 14px;">7mm height</td></tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- ═══════════════ 10 FILE FORMATS ═══════════════ -->
+<div class="section-header">
+  <span class="section-num">10</span>
+  <h2>File Formats &amp; Assets Checklist</h2>
+</div>
+
+<div class="card">
+  <h3>REQUIRED LOGO FILES</h3>
+  <table style="width:100%;font-size:13px;border-collapse:collapse;">
+    <thead>
+      <tr style="background:#fafafa;">
+        <th style="text-align:left;padding:10px 14px;font-weight:500;border-bottom:1px solid var(--hairline);color:var(--ink-mute);font-size:11px;letter-spacing:0.06em;">FILE</th>
+        <th style="text-align:left;padding:10px 14px;font-weight:500;border-bottom:1px solid var(--hairline);color:var(--ink-mute);font-size:11px;letter-spacing:0.06em;">FORMAT</th>
+        <th style="text-align:left;padding:10px 14px;font-weight:500;border-bottom:1px solid var(--hairline);color:var(--ink-mute);font-size:11px;letter-spacing:0.06em;">USE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding:10px 14px;border-bottom:1px solid var(--hairline);">blickstra-logo-light.svg</td><td style="padding:10px 14px;border-bottom:1px solid var(--hairline);font-family:'Courier New',monospace;font-size:12px;">SVG</td><td style="padding:10px 14px;border-bottom:1px solid var(--hairline);">Web, light backgrounds</td></tr>
+      <tr style="background:#fafafa;"><td style="padding:10px 14px;border-bottom:1px solid var(--hairline);">blickstra-logo-dark.svg</td><td style="padding:10px 14px;border-bottom:1px solid var(--hairline);font-family:'Courier New',monospace;font-size:12px;">SVG</td><td style="padding:10px 14px;border-bottom:1px solid var(--hairline);">Web, dark backgrounds</td></tr>
+      <tr><td style="padding:10px 14px;border-bottom:1px solid var(--hairline);">blickstra-mark.svg</td><td style="padding:10px 14px;border-bottom:1px solid var(--hairline);font-family:'Courier New',monospace;font-size:12px;">SVG</td><td style="padding:10px 14px;border-bottom:1px solid var(--hairline);">Standalone mark, icon</td></tr>
+      <tr style="background:#fafafa;"><td style="padding:10px 14px;border-bottom:1px solid var(--hairline);">favicon.ico</td><td style="padding:10px 14px;border-bottom:1px solid var(--hairline);font-family:'Courier New',monospace;font-size:12px;">ICO (16/32/48)</td><td style="padding:10px 14px;border-bottom:1px solid var(--hairline);">Browser tab</td></tr>
+      <tr><td style="padding:10px 14px;border-bottom:1px solid var(--hairline);">apple-touch-icon.png</td><td style="padding:10px 14px;border-bottom:1px solid var(--hairline);font-family:'Courier New',monospace;font-size:12px;">PNG 180×180</td><td style="padding:10px 14px;border-bottom:1px solid var(--hairline);">iOS homescreen</td></tr>
+      <tr style="background:#fafafa;"><td style="padding:10px 14px;border-bottom:1px solid var(--hairline);">og-image.png</td><td style="padding:10px 14px;border-bottom:1px solid var(--hairline);font-family:'Courier New',monospace;font-size:12px;">PNG 1200×630</td><td style="padding:10px 14px;border-bottom:1px solid var(--hairline);">Social sharing, OpenGraph</td></tr>
+      <tr><td style="padding:10px 14px;">blickstra-logo-print.pdf</td><td style="padding:10px 14px;font-family:'Courier New',monospace;font-size:12px;">PDF (vector)</td><td style="padding:10px 14px;">Print, letterhead, cards</td></tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<div class="doc-footer">
+  <div>
+    <span style="color:#3ecf8e;font-weight:500;">BLICKSTRA</span>
+    <span style="margin-left:16px;">Brand Guidelines v1.0 · June 2026</span>
+  </div>
+  <span>blickstra.com · hello@blickstra.my</span>
+</div>
+
+</body>
+</html>
