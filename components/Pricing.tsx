@@ -4,7 +4,6 @@ import { CheckCircle2 } from 'lucide-react'
 const plans = [
   {
     name: 'Scout',
-    nameBm: 'Percuma',
     price: 'FREE',
     priceSub: 'Forever',
     popular: false,
@@ -15,7 +14,6 @@ const plans = [
   },
   {
     name: 'Professional',
-    nameBm: 'Profesional',
     price: 'RM149',
     priceSub: '/month',
     popular: true,
@@ -26,7 +24,6 @@ const plans = [
   },
   {
     name: 'Enterprise',
-    nameBm: 'Perusahaan',
     price: 'RM399',
     priceSub: '/month',
     popular: false,
@@ -44,9 +41,9 @@ export function Pricing() {
         <div className="text-center mb-14">
           <p className="text-xs font-semibold text-emerald-600 uppercase tracking-widest mb-3">Pricing</p>
           <h2 className="text-3xl md:text-4xl font-medium text-zinc-900 tracking-tight mb-2">
-            Mula percuma. Naik taraf bila perlu.
+            Start free. Upgrade when you&apos;re ready.
           </h2>
-          <p className="text-zinc-400 text-sm">Start free. Upgrade when you&apos;re ready. No credit card required. No hidden fees.</p>
+          <p className="text-zinc-400 text-sm">No credit card required. No hidden fees.</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-5 items-start">
@@ -65,10 +62,9 @@ export function Pricing() {
               )}
 
               <div className="mb-5">
-                <h3 className={`text-lg font-medium mb-0.5 ${p.popular ? 'text-white' : 'text-zinc-900'}`}>
+                <h3 className={`text-lg font-medium mb-5 ${p.popular ? 'text-white' : 'text-zinc-900'}`}>
                   {p.name}
                 </h3>
-                <p className="text-xs text-zinc-400 font-medium">{p.nameBm}</p>
               </div>
 
               <div className="mb-6">

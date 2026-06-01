@@ -8,10 +8,9 @@ export function CTA() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(62,207,142,0.08)_0%,_transparent_70%)]" />
 
       <div className="relative max-w-3xl mx-auto text-center">
-        <h2 className="text-3xl md:text-5xl font-medium text-white tracking-tight mb-3">
-          Mula memenangi lebih banyak tender hari ini
+        <h2 className="text-3xl md:text-5xl font-medium text-white tracking-tight mb-4">
+          Start winning more tenders today
         </h2>
-        <p className="text-lg text-zinc-400 mb-4">Start winning more tenders today</p>
         <p className="text-sm text-zinc-500 max-w-xl mx-auto mb-10">
           Join Malaysian contractors already using Blickstra to find and win government contracts automatically.
         </p>
@@ -21,14 +20,14 @@ export function CTA() {
             href="https://app.blickstra.com/auth/signup"
             className="flex items-center gap-2 px-7 py-3.5 bg-emerald-400 hover:bg-emerald-300 text-zinc-900 font-medium rounded-md transition-colors text-base"
           >
-            Daftar Percuma / Get Started Free
+            Get Started Free
             <ArrowRight className="w-4 h-4" />
           </Link>
           <Link
             href="#contact"
             className="px-7 py-3.5 border border-zinc-700 hover:border-zinc-500 text-zinc-300 font-medium rounded-md transition-colors text-base"
           >
-            Hubungi Kami / Contact Us
+            Contact Us
           </Link>
         </div>
 

@@ -9,14 +9,9 @@ export function Testimonial() {
           <div className="absolute -top-4 left-10 text-5xl text-emerald-400 font-serif leading-none">&ldquo;</div>
 
           <blockquote className="text-lg md:text-xl text-zinc-700 leading-relaxed mb-6 font-medium">
-            Blickstra membantu TRMS Engineering mengenal pasti peluang tender
-            yang kami tidak akan jumpa secara manual. Sistem AI scoring
-            menjimatkan masa kami lebih 15 jam seminggu.
-          </blockquote>
-          <p className="text-sm text-zinc-400 italic mb-6">
             &ldquo;Blickstra helped TRMS Engineering identify tender opportunities we would never find manually.
             The AI scoring system saves us more than 15 hours a week.&rdquo;
-          </p>
+          </blockquote>
 
           <div className="flex items-center justify-center gap-4">
             <div className="w-12 h-12 rounded-full bg-zinc-950 flex items-center justify-center">

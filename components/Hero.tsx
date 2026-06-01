@@ -21,11 +21,6 @@ export function Hero() {
           <span className="text-emerald-500">for Malaysian Contractors</span>
         </h1>
 
-        {/* BM sub-headline */}
-        <p className="text-base text-zinc-400 font-medium mb-3 tracking-wide">
-          Risikan Tender Strategik untuk Kontraktor Malaysia
-        </p>
-
         {/* Sub-headline */}
         <p className="text-lg md:text-xl text-zinc-500 max-w-2xl mx-auto mb-10 leading-relaxed">
           Blickstra monitors JKR, MOH, TNB, KWSP and 7 more portals 24/7 —
@@ -38,7 +33,7 @@ export function Hero() {
             href="https://app.blickstra.com/auth/signup"
             className="flex items-center gap-2 px-6 py-3 bg-emerald-400 hover:bg-emerald-300 text-zinc-900 font-medium rounded-md transition-colors text-base shadow-sm"
           >
-            Mula Percuma / Get Started Free
+            Get Started Free
             <ArrowRight className="w-4 h-4" />
           </Link>
           <Link

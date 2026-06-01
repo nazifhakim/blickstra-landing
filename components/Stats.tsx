@@ -10,7 +10,7 @@ export function Stats() {
     <section className="border-y border-zinc-100 bg-zinc-50 py-14 px-6">
       <div className="max-w-5xl mx-auto">
         <p className="text-center text-xs font-semibold uppercase tracking-widest text-zinc-400 mb-10">
-          Dipercayai oleh kontraktor Malaysia · Trusted by Malaysian contractors
+          Trusted by Malaysian contractors
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map(s => (
